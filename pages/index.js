@@ -1,13 +1,6 @@
 import Link from "next/link";
 import { allPosts } from ".contentlayer/data";
-
-// NOTE: The functionality below will soon become part of Contentlayer.
-const pick = (obj, keys) => {
-  return keys.reduce((acc, key) => {
-    acc[key] = obj[key];
-    return acc;
-  }, {});
-};
+import { pick } from "@contentlayer/client";
 
 export default function Home({ posts }) {
   return (
