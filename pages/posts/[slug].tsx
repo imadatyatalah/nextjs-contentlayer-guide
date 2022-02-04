@@ -1,5 +1,6 @@
 import { allPosts } from ".contentlayer/data";
 import type { Post } from ".contentlayer/types";
+import type { GetStaticProps } from "next";
 
 type Props = {
   post: Post;
@@ -24,8 +25,8 @@ export async function getStaticPaths() {
 }
 
 // Statically fetch post by slug
-export async function getStaticProps({ params }) {
+export const getStaticProps: GetStaticProps = async ({ params }) => {
   const post = allPosts.find((post) => post.slug === params?.slug);
 
   return { props: { post } };
-}
+};
