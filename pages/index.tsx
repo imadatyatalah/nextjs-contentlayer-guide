@@ -1,8 +1,11 @@
 import Link from "next/link";
 import { allPosts } from ".contentlayer/data";
 import { pick } from "@contentlayer/client";
+import type { InferGetStaticPropsType } from "next";
 
-export default function Home({ posts }) {
+type Props = InferGetStaticPropsType<typeof getStaticProps>;
+
+export default function Home({ posts }: Props) {
   return (
     <section>
       <ul>

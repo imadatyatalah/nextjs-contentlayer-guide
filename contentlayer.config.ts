@@ -1,6 +1,7 @@
 import { defineDocumentType, makeSource } from "contentlayer/source-files";
+import type { ComputedFields } from "contentlayer/source-files";
 
-const computedFields = {
+const computedFields: ComputedFields = {
   slug: {
     type: "string",
     resolve: (doc) => doc._raw.sourceFileName.replace(/\.md/, ""),

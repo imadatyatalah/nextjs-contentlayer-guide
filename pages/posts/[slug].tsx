@@ -1,6 +1,11 @@
 import { allPosts } from ".contentlayer/data";
+import type { Post } from ".contentlayer/types";
 
-export default function Post({ post }) {
+type Props = {
+  post: Post;
+};
+
+export default function Post({ post }: Props) {
   return (
     <article>
       <h1>{post.title}</h1>
