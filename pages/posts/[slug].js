@@ -1,4 +1,4 @@
-import { allPosts } from ".contentlayer/data";
+import { allPosts } from "contentlayer/generated";
 
 export default function Post({ post }) {
   return (
