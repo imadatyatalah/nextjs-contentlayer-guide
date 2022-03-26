@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { allPosts } from ".contentlayer/data";
+import { allPosts } from "contentlayer/generated";
 import { pick } from "@contentlayer/client";
 import type { InferGetStaticPropsType } from "next";
 

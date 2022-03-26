@@ -11,6 +11,7 @@ const computedFields: ComputedFields = {
 const Post = defineDocumentType(() => ({
   name: "Post",
   filePathPattern: `**/*.md`,
+  contentType: "markdown",
   fields: {
     title: { type: "string", required: true },
     date: { type: "string", required: true },

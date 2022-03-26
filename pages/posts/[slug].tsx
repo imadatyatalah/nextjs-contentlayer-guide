@@ -1,5 +1,5 @@
-import { allPosts } from ".contentlayer/data";
-import type { Post } from ".contentlayer/types";
+import { allPosts } from "contentlayer/generated";
+import type { Post } from "contentlayer/generated";
 import type { GetStaticProps } from "next";
 
 type Props = {
